@@ -51,4 +51,7 @@ protected:
 
 	UFUNCTION(BlueprintCallable)
 	TArray<AActor*> GetAllActorsWithTag(const FName Tag);
+
+	UFUNCTION(BlueprintCallable)
+	TArray<AActor*> GetAllActorsWithInterface(const TSubclassOf<UInterface> Interface);
 };

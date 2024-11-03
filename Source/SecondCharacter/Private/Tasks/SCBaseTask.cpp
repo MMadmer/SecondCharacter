@@ -30,3 +30,11 @@ TArray<AActor*> USCBaseTask::GetAllActorsWithTag(const FName Tag)
 
 	return Actors;
 }
+
+TArray<AActor*> USCBaseTask::GetAllActorsWithInterface(const TSubclassOf<UInterface> Interface)
+{
+	TArray<AActor*> Actors;
+	UGameplayStatics::GetAllActorsWithInterface(this, Interface, Actors);
+
+	return Actors;
+}
